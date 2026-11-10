@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary":"#070504","on-primary-fixed":"#1e1b19","inverse-surface":"#31312d","primary-fixed-dim":"#ccc5c2","error-container":"#ffdad6","secondary-fixed-dim":"#e0c1a1","on-primary-container":"#8b8582","on-secondary":"#ffffff","tertiary-container":"#251e12","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#4a4643","on-tertiary":"#ffffff","on-secondary-fixed":"#281804","on-tertiary-fixed":"#221a0f","inverse-primary":"#ccc5c2","surface-container-low":"#f6f3ed","on-secondary-fixed-variant":"#58432a","surface-bright":"#fcf9f3","on-tertiary-fixed-variant":"#4f4538","outline":"#7e7570","secondary-container":"#fadab8","secondary":"#715a3f","secondary-fixed":"#fdddbb","on-secondary-container":"#765e43","on-surface-variant":"#4d4540","on-surface":"#1c1c18","surface-dim":"#dcdad4","tertiary-fixed":"#efe0ce","surface":"#fcf9f3","on-primary":"#ffffff","background":"#fcf9f3","on-tertiary-container":"#918575","outline-variant":"#e8e4da","on-background":"#1c1c18","tertiary":"#0a0601","on-error-container":"#93000a","surface-variant":"#e5e2dc","surface-container-highest":"#e5e2dc","on-error":"#ffffff","tertiary-fixed-dim":"#d2c4b3","surface-container-high":"#ebe8e2","error":"#ba1a1a","primary-fixed":"#e8e1dd","surface-tint":"#625d5b","primary-container":"#211e1c","surface-container":"#f0eee8","inverse-on-surface":"#f3f0ea"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.375rem","xl":"0.625rem","full":"9999px"},"spacing":{"gutter":"1.5rem","margin":"2rem","space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"label-md":["Manrope"],"body-lg":["Manrope"],"label-sm":["Manrope"],"headline-md":["EB Garamond"],"headline-xl":["EB Garamond"],"mono-data":["JetBrains Mono"],"body-md":["Manrope"],"body-sm":["Manrope"],"headline-lg":["EB Garamond"],"headline-lg-mobile":["EB Garamond"],"headline-sm":["EB Garamond"],"headline-xl-mobile":["EB Garamond"]},"fontSize":{"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"500"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"500"}],"mono-data":["12px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["34px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low border-r border-outline-variant/60 shadow-[0_1px_8px_rgba(0,0,0,0.02)] z-50 flex flex-col justify-between py-6 px-4"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3"><img alt="Sponsify Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDrDFrO2aLmlZN0AovKSwm4dzECKokCr1z06YndQampxgIqufW1keUUbrz_iXSZWVS270_zwFmW78oQ9iIni0xPxCuGhO_aYSyj74IQ7Fa7UoJjR0V7_zkVhaAQrMAZ2G43DcBJ3w0v5MhgUIxTQQgqwu1kVmfSbuwpDCOiRglai5ILmVo7whO_v1UYhHGrTakEGYKejshJLK0M0r2kouCk12Je9GubyjJEl-a5FTlHzQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-serif tracking-tight">Sponsify</span><span class="font-mono-data text-mono-data text-outline text-[11px] uppercase tracking-wider">Escrow Core</span></div></div><div class="bg-surface-container-lowest/80 border border-outline-variant/70 rounded-xl p-3 flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm"><div class="flex items-center gap-2.5"><div class="w-7 h-7 rounded-lg bg-primary-container text-surface-bright flex items-center justify-center font-headline-sm text-label-md font-serif font-bold">S</div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Sponsify Sovereign</span><span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">Brand Workspace</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[20px]">unfold_more</span></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-primary-container text-surface-bright font-medium shadow-sm"><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-[19px]">grid_view</span>Overview</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="my-campaigns" href="#"><span class="material-symbols-outlined text-[19px]">campaign</span>My Campaigns</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="explore-marketplace" href="#"><span class="material-symbols-outlined text-[19px]">storefront</span>Explore Campaigns</a><a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="creator-applications" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[19px]">assignment_ind</span>Creator Applications</div><span class="px-2 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container font-mono-data text-label-sm font-semibold">4</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="deliverables-approval" href="#"><span class="material-symbols-outlined text-[19px]">verified</span>Deliverables &amp; Approval</a><a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="escrow-payments" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[19px]">lock_clock</span>Escrow &amp; Payments</div><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-mono-data text-mono-data text-[11px]">Amoy</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics-reports" href="#"><span class="material-symbols-outlined text-[19px]">insights</span>Analytics &amp; Reports</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[19px]">settings</span>Settings</a></nav></div><div class="bg-surface-container-lowest/90 border border-outline-variant/70 rounded-xl p-3.5 space-y-2.5 shadow-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">Vault Locked</span><span class="font-mono-data text-mono-data text-primary font-semibold">142,500 USDC</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-3/4 rounded-full"></div></div><p class="font-mono-data text-mono-data text-outline text-[11px]">7 Milestones Pending Oracle</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-bright/90 backdrop-blur-xl border-b border-outline-variant/60 shadow-[0_1px_4px_rgba(0,0,0,0.02)] z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="Sponsify Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDrDFrO2aLmlZN0AovKSwm4dzECKokCr1z06YndQampxgIqufW1keUUbrz_iXSZWVS270_zwFmW78oQ9iIni0xPxCuGhO_aYSyj74IQ7Fa7UoJjR0V7_zkVhaAQrMAZ2G43DcBJ3w0v5MhgUIxTQQgqwu1kVmfSbuwpDCOiRglai5ILmVo7whO_v1UYhHGrTakEGYKejshJLK0M0r2kouCk12Je9GubyjJEl-a5FTlHzQ"/><span class="font-headline-sm text-headline-sm text-on-surface font-serif">Platform Console</span><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/60 font-mono-data text-mono-data text-on-surface-variant text-[11px]"><span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>Polygon Amoy Testnet</div></div><div class="flex items-center gap-4"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/60 hover:bg-surface-container cursor-pointer transition-colors font-mono-data text-mono-data text-on-surface-variant text-[12px]"><span class="material-symbols-outlined text-[16px] text-secondary">account_balance_wallet</span>0x71C...39A2<span class="material-symbols-outlined text-[15px] text-outline">content_copy</span></div><button class="w-9 h-9 rounded-lg bg-surface-container-low border border-outline-variant/60 hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></button><div class="flex items-center gap-3 pl-2"><div class="w-8 h-8 rounded-full bg-primary-container text-surface-bright flex items-center justify-center"><span class="material-symbols-outlined text-surface-bright text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Elena Vance</span><span class="font-body-sm text-body-sm text-outline leading-tight">Growth Lead</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="w-full max-w-[1360px] mx-auto px-6 lg:px-12 py-10 space-y-12">
+<!-- Section 1: Page Header & Contextual Actions -->
+<header class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-4">
+<div class="space-y-3 max-w-3xl">
+<!-- Breadcrumb / Ledger Node Metadata -->
+<div class="flex flex-wrap items-center gap-2 font-mono-data text-body-sm text-outline">
+<span class="hover:text-on-surface transition-colors cursor-pointer">Aura Brands Workspace</span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-on-surface transition-colors cursor-pointer">Escrow &amp; Payments</span>
+<span class="text-outline-variant">/</span>
+<span class="px-2 py-0.5 rounded-lg bg-surface-container-high text-primary font-medium tracking-wide">
+            Polygon Amoy Vault <span class="text-secondary font-semibold">0x84f...c192</span>
+</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+          Blockchain Escrow &amp; Treasury Settlements
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Deterministic Proof-to-Pay smart contract vaults on Polygon Amoy Testnet. Real-time multi-sig milestones, gasless relayer balance, and automated release triggers.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-wrap items-center gap-3">
+<button class="group flex items-center gap-2 px-5 py-3 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container-high transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary group-hover:scale-110 transition-transform">verified_user</span>
+<span class="font-label-md text-label-md">Audit Report</span>
+</button>
+<button class="group flex items-center gap-2 px-5 py-3 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container-high transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-primary transition-colors">download</span>
+<span class="font-label-md text-label-md">Tax &amp; CSV Ledger</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-3 rounded-lg bg-primary-container text-surface-bright hover:bg-on-surface-variant transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">add_card</span>
+<span class="font-label-md text-label-md">Deposit Funds to Escrow</span>
+</button>
+</div>
+</header>
+<!-- Section 2: Four Core Financial Escrow Metrics -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Metric 1: Total Locked in Escrow -->
+<div class="relative p-7 rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between overflow-hidden group">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-secondary/5 blur-xl pointer-events-none"></div>
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Total in Escrow</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<div class="flex items-baseline gap-2 pt-1">
+<span class="font-headline-md text-headline-md text-primary font-medium tracking-tight">$142,850.00</span>
+<span class="font-mono-data text-body-sm text-outline">USDC</span>
+</div>
+</div>
+<div class="pt-6 flex items-center justify-between text-body-sm">
+<span class="font-mono-data text-outline">6 Active Vaults Locked</span>
+<span class="font-mono-data text-secondary font-medium">+$18.5k this cycle</span>
+</div>
+</div>
+<!-- Metric 2: Available Treasury -->
+<div class="relative p-7 rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between overflow-hidden group">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Available Treasury</span>
+<span class="material-symbols-outlined text-[18px] text-outline">account_balance</span>
+</div>
+<div class="flex items-baseline gap-2 pt-1">
+<span class="font-headline-md text-headline-md text-primary font-medium tracking-tight">$48,200.00</span>
+<span class="font-mono-data text-body-sm text-outline">USDC</span>
+</div>
+</div>
+<div class="pt-6 flex items-center justify-between text-body-sm">
+<span class="font-mono-data text-outline">Unallocated capital</span>
+<span class="font-label-md text-label-md text-primary font-medium cursor-pointer hover:underline">Instant Deploy →</span>
+</div>
+</div>
+<!-- Metric 3: Pending Milestones Release -->
+<div class="relative p-7 rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between overflow-hidden group">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Pending Milestones</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-mono-data text-[11px] font-semibold">3 In Review</span>
+</div>
+<div class="flex items-baseline gap-2 pt-1">
+<span class="font-headline-md text-headline-md text-primary font-medium tracking-tight">$14,900.00</span>
+<span class="font-mono-data text-body-sm text-outline">USDC</span>
+</div>
+</div>
+<div class="pt-6 flex items-center justify-between text-body-sm">
+<span class="font-mono-data text-outline">Oracle verification</span>
+<span class="font-mono-data text-secondary">48h Safe Window</span>
+</div>
+</div>
+<!-- Metric 4: Total Disbursed / Historical Settlements -->
+<div class="relative p-7 rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between overflow-hidden group">
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Total Disbursed</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+</div>
+<div class="flex items-baseline gap-2 pt-1">
+<span class="font-headline-md text-headline-md text-primary font-medium tracking-tight">$386,400.00</span>
+<span class="font-mono-data text-body-sm text-outline">USDC</span>
+</div>
+</div>
+<div class="pt-6 flex items-center justify-between text-body-sm">
+<span class="font-mono-data text-outline">100% On-time</span>
+<span class="font-mono-data text-on-surface-variant font-medium">0% Dispute Loss</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Interactive Proof-to-Pay Payment Pipeline Visualizer -->
+<section class="p-8 lg:p-10 rounded-xl bg-surface-container-lowest shadow-md space-y-8">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Deterministic Protocol</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-mono-data text-body-sm text-outline">Smart Contract Lifecycle</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Proof-to-Pay Architectural Pipeline</h2>
+</div>
+<!-- Node & Multi-Sig indicator -->
+<div class="flex items-center gap-3 px-4 py-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-secondary">hub</span>
+<span class="font-mono-data text-body-sm text-on-surface">Polygon ERC-4337 Relayer:</span>
+<span class="font-mono-data text-body-sm text-secondary font-medium">Live (0.0001 MATIC/tx subsidised)</span>
+</div>
+</div>
+<!-- Stepper Flow -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+<!-- Step 1 -->
+<div class="p-5 rounded-lg bg-surface-container-low flex flex-col justify-between h-full space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-label-sm text-secondary font-semibold">01 / CREATED</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">done_all</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary">Campaign Inscribed</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Terms, deliverables &amp; milestones pinned to IPFS and signed on-chain.</p>
+</div>
+<div class="pt-2 font-mono-data text-[11px] text-outline truncate">
+            IPFS: bafy...98a3
+          </div>
+</div>
+<!-- Step 2 -->
+<div class="p-5 rounded-lg bg-surface-container-low flex flex-col justify-between h-full space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-label-sm text-secondary font-semibold">02 / ESCROW</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">lock</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary">Funds Deposited</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">USDC transferred into immutable non-custodial multi-sig vault.</p>
+</div>
+<div class="pt-2 font-mono-data text-[11px] text-secondary truncate">
+            Locked: 18,500 USDC
+          </div>
+</div>
+<!-- Step 3: Active Stage Highlight -->
+<div class="p-5 rounded-lg bg-surface-container-high ring-1 ring-secondary/30 flex flex-col justify-between h-full space-y-4 relative shadow-sm">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-label-sm text-secondary font-semibold">03 / PROOF</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono-data bg-secondary-container text-on-secondary-container font-semibold">LIVE</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary">Work Submitted</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Creator transmits verified digital proof hash and social metrics API feed.</p>
+</div>
+<div class="pt-2 font-mono-data text-[11px] text-primary font-medium truncate">
+            Hash: 0x93c...44ea
+          </div>
+</div>
+<!-- Step 4 -->
+<div class="p-5 rounded-lg bg-surface-container-low/70 flex flex-col justify-between h-full space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-label-sm text-outline font-semibold">04 / AUDIT</span>
+<span class="material-symbols-outlined text-[18px] text-outline">gavel</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface-variant">Brand &amp; Oracle</h3>
+<p class="font-body-sm text-body-sm text-outline">Milestone verification check or 48-hour automated auto-approval timer.</p>
+</div>
+<div class="pt-2 font-mono-data text-[11px] text-outline truncate">
+            Timer: 34h Remaining
+          </div>
+</div>
+<!-- Step 5 -->
+<div class="p-5 rounded-lg bg-surface-container-low/70 flex flex-col justify-between h-full space-y-4">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="font-mono-data text-label-sm text-outline font-semibold">05 / RELEASE</span>
+<span class="material-symbols-outlined text-[18px] text-outline">payments</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface-variant">Payment Release</h3>
+<p class="font-body-sm text-body-sm text-outline">Smart contract releases instant payout to creator destination wallet.</p>
+</div>
+<div class="pt-2 font-mono-data text-[11px] text-outline truncate">
+            Gasless Auto-Settlement
+          </div>
+</div>
+</div>
+<!-- Active Milestone Context Banner -->
+<div class="p-4 rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-primary font-medium">
+              Current Active Contract: Aura Smart Ring Launch (Milestone 2/3)
+            </span>
+<span class="font-mono-data text-body-sm text-outline">
+              Proof Hash received 14 hours ago • Kleros Safe Harbor Active • Multi-sig 2 of 3 signed
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-center">
+<button class="px-4 py-2 rounded-lg bg-primary-container text-surface-bright font-label-md text-label-md hover:bg-on-surface-variant transition-colors" type="button">
+            Trigger Instant Release
+          </button>
+</div>
+</div>
+</section>
+<!-- Section 4: Dual Panelled Multi-Sig & Gas Reserve + Safe Harbor -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Multi-Sig Protocol Station (7 Columns) -->
+<div class="lg:col-span-7 p-8 rounded-xl bg-surface-container-low shadow-sm space-y-6">
+<div class="flex items-center justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Security Infrastructure</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Multi-Sig Smart Vault &amp; Gas Station</h3>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-primary font-mono-data text-label-sm">
+            ERC-4337 Account Abstraction
+          </span>
+</div>
+<!-- Signature Matrix -->
+<div class="p-5 rounded-lg bg-surface-container-lowest space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-primary font-medium">Required Signers</span>
+<span class="font-mono-data text-body-sm text-secondary font-semibold">2 of 3 Validated</span>
+</div>
+<!-- Signers Grid -->
+<div class="space-y-2.5">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-primary font-medium">Elena Vance (Brand Admin)</span>
+<span class="font-mono-data text-[11px] text-outline">0x71c8...39a2 • Signed 2h ago</span>
+</div>
+</div>
+<span class="font-mono-data text-[11px] text-secondary font-medium">Confirmed</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-primary font-medium">Polygon Amoy Social Oracle</span>
+<span class="font-mono-data text-[11px] text-outline">0x38b2...a891 • Delivery Metric Authenticated</span>
+</div>
+</div>
+<span class="font-mono-data text-[11px] text-secondary font-medium">Verified</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-outline">pending</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Autonomous Protocol Relayer</span>
+<span class="font-mono-data text-[11px] text-outline">0x91d3...fe14 • Awaiting final approval pulse</span>
+</div>
+</div>
+<span class="font-mono-data text-[11px] text-outline">Standby</span>
+</div>
+</div>
+</div>
+<!-- Gas Reserve Fuel Station -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+<div class="p-4 rounded-lg bg-surface-container-lowest space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Gas Tank Reserve</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">local_gas_station</span>
+</div>
+<div class="font-mono-data text-title-md text-primary font-semibold">14.80 MATIC</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[82%] rounded-full"></div>
+</div>
+<p class="font-mono-data text-[11px] text-outline pt-1">~4,720 Milestone operations prepaid</p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-lowest space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Contract Health</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+</div>
+<div class="font-mono-data text-title-md text-primary font-semibold">100% Deterministic</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              OpenZeppelin audited proxies. Zero manual withdrawal without cryptographic deliverable consensus.
+            </p>
+</div>
+</div>
+</div>
+<!-- Dispute Grace Window & Kleros Fallback (5 Columns) -->
+<div class="lg:col-span-5 p-8 rounded-xl bg-surface-container-low shadow-sm space-y-6">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Arbitration Architecture</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">48h Safe Harbor Window</h3>
+</div>
+<div class="relative p-6 rounded-lg bg-surface-container-lowest space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-primary">Decentralized Arbitration</h4>
+<p class="font-mono-data text-[11px] text-outline">Powered by Kleros Dispute Module v2</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Every deliverable submission initiates an unalterable 48-hour challenge window. If no quality dispute is lodged, funds release autonomously to protect creator liquidity.
+          </p>
+<div class="p-3.5 rounded-lg bg-surface-container-low space-y-2 font-mono-data text-body-sm">
+<div class="flex justify-between text-outline">
+<span>Arbitration Deposit:</span>
+<span class="text-primary font-medium">150 USDC</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>Juror Pool:</span>
+<span class="text-primary font-medium">Media &amp; IP Rights</span>
+</div>
+<div class="flex justify-between text-outline">
+<span>Historically Disputed:</span>
+<span class="text-secondary font-medium">0 Campaigns</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md text-center" type="button">
+            Review Dispute Protocol Specs
+          </button>
+</div>
+<!-- Contract Details -->
+<div class="px-2 space-y-2 font-mono-data text-body-sm text-outline">
+<div class="flex justify-between items-center">
+<span>Escrow Vault Proxy:</span>
+<span class="text-primary cursor-pointer hover:underline flex items-center gap-1">
+              0x84f4...c192
+              <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</span>
+</div>
+<div class="flex justify-between items-center">
+<span>Network Genesis:</span>
+<span class="text-on-surface-variant">Block #18,924,102</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Active Escrow Vaults & Milestones Table -->
+<section class="p-8 lg:p-10 rounded-xl bg-surface-container-lowest shadow-md space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Active Contracts</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Locked Campaign Vaults &amp; Live Milestones</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded-full bg-surface-container-low text-primary font-mono-data text-body-sm">
+            4 Contracts In-Lock
+          </span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm uppercase tracking-wider text-outline">
+<th class="py-3.5 px-4 rounded-l-lg">Campaign / Scope</th>
+<th class="py-3.5 px-4">Creator</th>
+<th class="py-3.5 px-4">Locked Value</th>
+<th class="py-3.5 px-4">Current Milestone Status</th>
+<th class="py-3.5 px-4 text-right rounded-r-lg">Execution Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 space-y-2 font-body-md text-body-md">
+<!-- Row 1: Aura Smart Ring Launch -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center font-headline-sm font-medium text-secondary">
+                    A
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Aura Smart Ring Launch</span>
+<span class="font-mono-data text-body-sm text-outline">Vault #0x102 • 3 Milestones Total</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-[11px] font-mono-data text-primary font-bold">@</span>
+<span class="font-title-md text-body-md text-primary font-medium">@techwithalex</span>
+</div>
+</td>
+<td class="py-5 px-4 font-mono-data">
+<span class="font-title-md text-title-md text-primary font-semibold">18,500</span>
+<span class="text-body-sm text-outline"> USDC</span>
+</td>
+<td class="py-5 px-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-title-md text-body-sm text-primary font-medium">Milestone 2 of 3</span>
+</div>
+<span class="font-mono-data text-[12px] text-secondary">Deliverable Uploaded (IPFS)</span>
+</div>
+</td>
+<td class="py-5 px-4 text-right">
+<div class="flex items-center justify-end gap-2">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors font-label-md text-label-md" type="button">
+                    Request Edit
+                  </button>
+<button class="px-4 py-1.5 rounded-lg bg-primary-container text-surface-bright hover:bg-on-surface-variant transition-colors font-label-md text-label-md shadow-sm" type="button">
+                    Release 3,200 USDC
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Spring Wellness Glow -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center font-headline-sm font-medium text-secondary">
+                    S
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Spring Wellness Glow</span>
+<span class="font-mono-data text-body-sm text-outline">Vault #0x103 • 2 Milestones Total</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-[11px] font-mono-data text-primary font-bold">@</span>
+<span class="font-title-md text-body-md text-primary font-medium">@mayalifestyle</span>
+</div>
+</td>
+<td class="py-5 px-4 font-mono-data">
+<span class="font-title-md text-title-md text-primary font-semibold">8,400</span>
+<span class="text-body-sm text-outline"> USDC</span>
+</td>
+<td class="py-5 px-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-title-md text-body-sm text-on-surface-variant font-medium">Milestone 1 of 2</span>
+</div>
+<span class="font-mono-data text-[12px] text-outline">In Production • Due in 4 days</span>
+</div>
+</td>
+<td class="py-5 px-4 text-right">
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+                  View Contract
+                </button>
+</td>
+</tr>
+<!-- Row 3: Aura Ring Dev SDK -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center font-headline-sm font-medium text-secondary">
+                    D
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Aura Ring Dev SDK</span>
+<span class="font-mono-data text-body-sm text-outline">Vault #0x104 • 1 Milestone Total</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-[11px] font-mono-data text-primary font-bold">@</span>
+<span class="font-title-md text-body-md text-primary font-medium">@codeandfitness</span>
+</div>
+</td>
+<td class="py-5 px-4 font-mono-data">
+<span class="font-title-md text-title-md text-primary font-semibold">5,400</span>
+<span class="text-body-sm text-outline"> USDC</span>
+</td>
+<td class="py-5 px-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-title-md text-body-sm text-on-surface-variant font-medium">Milestone 1 of 1</span>
+</div>
+<span class="font-mono-data text-[12px] text-outline">Pending Deliverable • GitHub Commit</span>
+</div>
+</td>
+<td class="py-5 px-4 text-right">
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md" type="button">
+                  View Escrow Lock
+                </button>
+</td>
+</tr>
+<!-- Row 4: Nordic Audio Earbuds -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center font-headline-sm font-medium text-secondary">
+                    N
+                  </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-primary">Nordic Audio Earbuds</span>
+<span class="font-mono-data text-body-sm text-outline">Vault #0x101 • 3 Milestones Total</span>
+</div>
+</div>
+</td>
+<td class="py-5 px-4">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-[11px] font-mono-data text-primary font-bold">@</span>
+<span class="font-title-md text-body-md text-primary font-medium">@marcusvibes</span>
+</div>
+</td>
+<td class="py-5 px-4 font-mono-data">
+<span class="font-title-md text-title-md text-primary font-semibold">7,500</span>
+<span class="text-body-sm text-outline"> USDC</span>
+</td>
+<td class="py-5 px-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-title-md text-body-sm text-primary font-medium">Milestone 3 of 3</span>
+</div>
+<span class="font-mono-data text-[12px] text-secondary">All Funds Released • Completed</span>
+</div>
+</td>
+<td class="py-5 px-4 text-right">
+<button class="px-4 py-1.5 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md inline-flex items-center gap-1.5" type="button">
+                  Receipt
+                  <span class="material-symbols-outlined text-[14px] text-outline">open_in_new</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 6: Immutable Transaction Ledger (Escrow Releases & Deposits) -->
+<section class="p-8 lg:p-10 rounded-xl bg-surface-container-low shadow-sm space-y-6">
+<!-- Top Ledger Header & Filter Controls -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">On-Chain Audit</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Immutable Transaction Ledger</h2>
+</div>
+<!-- Filter Pills -->
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container text-surface-bright font-label-md text-label-md" type="button">
+            All Types
+          </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-highest transition-colors font-label-md text-label-md" type="button">
+            Releases
+          </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-highest transition-colors font-label-md text-label-md" type="button">
+            Deposits &amp; Locks
+          </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-highest transition-colors font-label-md text-label-md" type="button">
+            Multi-sig Clearances
+          </button>
+</div>
+</div>
+<!-- Ledger Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-highest/60 font-label-sm text-label-sm uppercase tracking-wider text-outline">
+<th class="py-3 px-4 rounded-l-lg">Timestamp</th>
+<th class="py-3 px-4">Transaction Type</th>
+<th class="py-3 px-4">Recipient / Party</th>
+<th class="py-3 px-4">Campaign Scope</th>
+<th class="py-3 px-4">Amount</th>
+<th class="py-3 px-4">Status</th>
+<th class="py-3 px-4 text-right rounded-r-lg">Polygonscan Hash</th>
+</tr>
+</thead>
+<tbody class="font-mono-data text-body-sm text-on-surface divide-y-0 space-y-1">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-4 px-4 text-outline">Today, 14:28:02</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-secondary-container/50 text-on-secondary-container font-medium text-[11px]">
+<span class="material-symbols-outlined text-[13px]">arrow_upward</span> Escrow Release
+                </span>
+</td>
+<td class="py-4 px-4 text-primary font-medium">@techwithalex</td>
+<td class="py-4 px-4 text-on-surface-variant font-sans">Aura Smart Ring M1</td>
+<td class="py-4 px-4 font-semibold text-primary">6,100 USDC</td>
+<td class="py-4 px-4 text-secondary font-medium">Settled • M1</td>
+<td class="py-4 px-4 text-right">
+<a class="inline-flex items-center gap-1 text-secondary hover:underline" href="#">
+                  0x9a2f...11b8
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-4 px-4 text-outline">Yesterday, 19:10:44</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-surface-container-highest text-primary font-medium text-[11px]">
+<span class="material-symbols-outlined text-[13px]">arrow_downward</span> Deposit &amp; Lock
+                </span>
+</td>
+<td class="py-4 px-4 text-primary font-medium">Escrow Vault #0x104</td>
+<td class="py-4 px-4 text-on-surface-variant font-sans">Aura Ring Dev SDK</td>
+<td class="py-4 px-4 font-semibold text-primary">5,400 USDC</td>
+<td class="py-4 px-4 text-outline font-medium">Vault In-Lock</td>
+<td class="py-4 px-4 text-right">
+<a class="inline-flex items-center gap-1 text-secondary hover:underline" href="#">
+                  0x77c4...bb30
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-4 px-4 text-outline">May 14, 11:05:12</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-surface-container-highest text-primary font-medium text-[11px]">
+<span class="material-symbols-outlined text-[13px]">lock</span> Vault Multi-Sig Inscription
+                </span>
+</td>
+<td class="py-4 px-4 text-primary font-medium">Escrow Vault #0x103</td>
+<td class="py-4 px-4 text-on-surface-variant font-sans">Spring Wellness Glow</td>
+<td class="py-4 px-4 font-semibold text-primary">8,400 USDC</td>
+<td class="py-4 px-4 text-outline font-medium">Vault In-Lock</td>
+<td class="py-4 px-4 text-right">
+<a class="inline-flex items-center gap-1 text-secondary hover:underline" href="#">
+                  0x41e8...cc88
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-4 px-4 text-outline">May 11, 09:44:20</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-secondary-container/50 text-on-secondary-container font-medium text-[11px]">
+<span class="material-symbols-outlined text-[13px]">arrow_upward</span> Escrow Release
+                </span>
+</td>
+<td class="py-4 px-4 text-primary font-medium">@marcusvibes</td>
+<td class="py-4 px-4 text-on-surface-variant font-sans">Nordic Audio Earbuds</td>
+<td class="py-4 px-4 font-semibold text-primary">7,500 USDC</td>
+<td class="py-4 px-4 text-secondary font-medium">Settled Full</td>
+<td class="py-4 px-4 text-right">
+<a class="inline-flex items-center gap-1 text-secondary hover:underline" href="#">
+                  0x23a1...78f0
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-4 px-4 text-outline">May 08, 16:30:19</td>
+<td class="py-4 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-surface-container-highest text-primary font-medium text-[11px]">
+<span class="material-symbols-outlined text-[13px]">published_with_changes</span> Gas Station Top-up
+                </span>
+</td>
+<td class="py-4 px-4 text-primary font-medium">Relayer Tank</td>
+<td class="py-4 px-4 text-on-surface-variant font-sans">Global Protocol Subsidy</td>
+<td class="py-4 px-4 font-semibold text-primary">25.00 MATIC</td>
+<td class="py-4 px-4 text-secondary font-medium">Confirmed</td>
+<td class="py-4 px-4 text-right">
+<a class="inline-flex items-center gap-1 text-secondary hover:underline" href="#">
+                  0x110e...88ab
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Ledger Summary Footer -->
+<div class="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono-data text-body-sm text-outline">
+<div>Showing 5 of 148 verified smart contract transactions</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high transition-colors text-primary disabled:opacity-50" type="button">
+            Previous
+          </button>
+<span class="px-2 text-primary font-medium">Page 1 of 30</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high transition-colors text-primary" type="button">
+            Next
+          </button>
+</div>
+</div>
+</section>
+</div>
+</div></main></div></body></html>

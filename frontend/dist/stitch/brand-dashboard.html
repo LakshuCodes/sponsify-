@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary":"#070504","on-primary-fixed":"#1e1b19","inverse-surface":"#31312d","primary-fixed-dim":"#ccc5c2","error-container":"#ffdad6","secondary-fixed-dim":"#e0c1a1","on-primary-container":"#8b8582","on-secondary":"#ffffff","tertiary-container":"#251e12","surface-container-lowest":"#ffffff","on-primary-fixed-variant":"#4a4643","on-tertiary":"#ffffff","on-secondary-fixed":"#281804","on-tertiary-fixed":"#221a0f","inverse-primary":"#ccc5c2","surface-container-low":"#f6f3ed","on-secondary-fixed-variant":"#58432a","surface-bright":"#fcf9f3","on-tertiary-fixed-variant":"#4f4538","outline":"#7e7570","secondary-container":"#fadab8","secondary":"#715a3f","secondary-fixed":"#fdddbb","on-secondary-container":"#765e43","on-surface-variant":"#4d4540","on-surface":"#1c1c18","surface-dim":"#dcdad4","tertiary-fixed":"#efe0ce","surface":"#fcf9f3","on-primary":"#ffffff","background":"#fcf9f3","on-tertiary-container":"#918575","outline-variant":"#e8e4da","on-background":"#1c1c18","tertiary":"#0a0601","on-error-container":"#93000a","surface-variant":"#e5e2dc","surface-container-highest":"#e5e2dc","on-error":"#ffffff","tertiary-fixed-dim":"#d2c4b3","surface-container-high":"#ebe8e2","error":"#ba1a1a","primary-fixed":"#e8e1dd","surface-tint":"#625d5b","primary-container":"#211e1c","surface-container":"#f0eee8","inverse-on-surface":"#f3f0ea"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.375rem","xl":"0.625rem","full":"9999px"},"spacing":{"gutter":"1.5rem","margin":"2rem","space-md":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","space-sm":"0.5rem"},"fontFamily":{"label-md":["Manrope"],"body-lg":["Manrope"],"label-sm":["Manrope"],"headline-md":["EB Garamond"],"headline-xl":["EB Garamond"],"mono-data":["JetBrains Mono"],"body-md":["Manrope"],"body-sm":["Manrope"],"headline-lg":["EB Garamond"],"headline-lg-mobile":["EB Garamond"],"headline-sm":["EB Garamond"],"headline-xl-mobile":["EB Garamond"]},"fontSize":{"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"30px","letterSpacing":"-0.015em","fontWeight":"500"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"500"}],"mono-data":["12px",{"lineHeight":"16px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["34px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-xl-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low border-r border-outline-variant/60 shadow-[0_1px_8px_rgba(0,0,0,0.02)] z-50 flex flex-col justify-between py-6 px-4"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-3"><img alt="Sponsify Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDrDFrO2aLmlZN0AovKSwm4dzECKokCr1z06YndQampxgIqufW1keUUbrz_iXSZWVS270_zwFmW78oQ9iIni0xPxCuGhO_aYSyj74IQ7Fa7UoJjR0V7_zkVhaAQrMAZ2G43DcBJ3w0v5MhgUIxTQQgqwu1kVmfSbuwpDCOiRglai5ILmVo7whO_v1UYhHGrTakEGYKejshJLK0M0r2kouCk12Je9GubyjJEl-a5FTlHzQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-serif tracking-tight">Sponsify</span><span class="font-mono-data text-mono-data text-outline text-[11px] uppercase tracking-wider">Escrow Core</span></div></div><div class="bg-surface-container-lowest/80 border border-outline-variant/70 rounded-xl p-3 flex items-center justify-between cursor-pointer hover:bg-surface-container transition-colors shadow-sm"><div class="flex items-center gap-2.5"><div class="w-7 h-7 rounded-lg bg-primary-container text-surface-bright flex items-center justify-center font-headline-sm text-label-md font-serif font-bold">S</div><div class="flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold">Sponsify Sovereign</span><span class="font-mono-data text-mono-data text-on-surface-variant text-[11px]">Brand Workspace</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-[20px]">unfold_more</span></div><nav class="flex flex-col gap-1.5" data-active-classes="bg-primary-container text-surface-bright font-medium shadow-sm"><a aria-current="page" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl transition-all bg-primary-container text-surface-bright font-medium shadow-sm" data-path="overview" href="#"><span class="material-symbols-outlined text-[19px]">grid_view</span>Overview</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="my-campaigns" href="#"><span class="material-symbols-outlined text-[19px]">campaign</span>My Campaigns</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="explore-marketplace" href="#"><span class="material-symbols-outlined text-[19px]">storefront</span>Explore Campaigns</a><a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="creator-applications" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[19px]">assignment_ind</span>Creator Applications</div><span class="px-2 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container font-mono-data text-label-sm font-semibold">4</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="deliverables-approval" href="#"><span class="material-symbols-outlined text-[19px]">verified</span>Deliverables &amp; Approval</a><a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="escrow-payments" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[19px]">lock_clock</span>Escrow &amp; Payments</div><span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-mono-data text-mono-data text-[11px]">Amoy</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="analytics-reports" href="#"><span class="material-symbols-outlined text-[19px]">insights</span>Analytics &amp; Reports</a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-body-md text-body-md text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[19px]">settings</span>Settings</a></nav></div><div class="bg-surface-container-lowest/90 border border-outline-variant/70 rounded-xl p-3.5 space-y-2.5 shadow-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">Vault Locked</span><span class="font-mono-data text-mono-data text-primary font-semibold">142,500 USDC</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-3/4 rounded-full"></div></div><p class="font-mono-data text-mono-data text-outline text-[11px]">7 Milestones Pending Oracle</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-bright/90 backdrop-blur-xl border-b border-outline-variant/60 shadow-[0_1px_4px_rgba(0,0,0,0.02)] z-40 px-8 flex items-center justify-between"><div class="flex items-center gap-3"><img alt="Sponsify Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDrDFrO2aLmlZN0AovKSwm4dzECKokCr1z06YndQampxgIqufW1keUUbrz_iXSZWVS270_zwFmW78oQ9iIni0xPxCuGhO_aYSyj74IQ7Fa7UoJjR0V7_zkVhaAQrMAZ2G43DcBJ3w0v5MhgUIxTQQgqwu1kVmfSbuwpDCOiRglai5ILmVo7whO_v1UYhHGrTakEGYKejshJLK0M0r2kouCk12Je9GubyjJEl-a5FTlHzQ"/><span class="font-headline-sm text-headline-sm text-on-surface font-serif">Platform Console</span><div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/60 font-mono-data text-mono-data text-on-surface-variant text-[11px]"><span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>Polygon Amoy Testnet</div></div><div class="flex items-center gap-4"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/60 hover:bg-surface-container cursor-pointer transition-colors font-mono-data text-mono-data text-on-surface-variant text-[12px]"><span class="material-symbols-outlined text-[16px] text-secondary">account_balance_wallet</span>0x71C...39A2<span class="material-symbols-outlined text-[15px] text-outline">content_copy</span></div><button class="w-9 h-9 rounded-lg bg-surface-container-low border border-outline-variant/60 hover:bg-surface-container text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span></button><div class="flex items-center gap-3 pl-2"><div class="w-8 h-8 rounded-full bg-primary-container text-surface-bright flex items-center justify-center"><span class="material-symbols-outlined text-surface-bright text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-semibold leading-tight">Elena Vance</span><span class="font-body-sm text-body-sm text-outline leading-tight">Growth Lead</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full p-8 space-y-8 bg-surface">
+<!-- Section 1: Workspace Header & Greeting -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-2">
+<div class="space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-surface-container-high border border-outline-variant/60 text-on-surface-variant font-mono-data text-mono-data text-[11px]">
+          Aura Brands Workspace
+        </span>
+<span class="text-outline font-mono-data text-mono-data">•</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant flex items-center gap-1.5 text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Amoy Escrow Active
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-serif tracking-tight font-normal">
+        Brand Operations &amp; Escrow Overview
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Welcome back, Elena Vance • Real-time creator settlements &amp; multi-sig contract activity
+      </p>
+</div>
+<!-- Header Actions -->
+<div class="flex flex-wrap items-center gap-3">
+<button class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg bg-surface-container-lowest border border-outline-variant shadow-sm hover:bg-surface-container-low transition-all font-label-md text-label-md text-on-surface font-medium" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">file_download</span>
+        Export Tax &amp; Audit CSV
+      </button>
+<button class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-lg bg-surface-container-lowest border border-outline-variant shadow-sm hover:bg-surface-container-low transition-all font-label-md text-label-md text-on-surface font-medium" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_balance_wallet</span>
+        Deposit Escrow Funds
+      </button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-primary-container text-surface-bright font-label-md text-label-md font-semibold shadow-sm hover:bg-primary transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+        Create New Campaign
+      </button>
+</div>
+</div>
+<!-- Section 2: Top KPI Metric Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm space-y-3 relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">Total Escrow Locked</span>
+<div class="font-headline-md text-headline-md font-serif text-on-surface font-medium">142,850 <span class="font-mono-data text-body-sm font-medium text-secondary">USDC</span></div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">lock_clock</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container/70 text-on-secondary-container font-mono-data text-mono-data text-[11px]">
+          +18,500 this mo
+        </span>
+<span class="font-body-sm text-body-sm text-outline truncate">6 active Amoy vaults</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm space-y-3 relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">Active Campaigns</span>
+<div class="font-headline-md text-headline-md font-serif text-on-surface font-medium">8 <span class="font-body-sm font-sans font-normal text-on-surface-variant">Running</span></div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed/50 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-secondary-fixed font-mono-data text-mono-data text-[11px]">
+          3 in review
+        </span>
+<span class="font-body-sm text-body-sm text-outline truncate">5 taking applications</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm space-y-3 relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">Creator Applications</span>
+<div class="font-headline-md text-headline-md font-serif text-on-surface font-medium">34 <span class="font-body-sm font-sans font-normal text-on-surface-variant">New</span></div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">group_add</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-mono-data text-mono-data text-[11px]">
+          12 screening queue
+        </span>
+<span class="font-body-sm text-body-sm text-outline truncate">Priority action today</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm space-y-3 relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-[10px]">Milestones Completed</span>
+<div class="font-headline-md text-headline-md font-serif text-on-surface font-medium">128 <span class="font-body-sm font-sans font-normal text-on-surface-variant">Delivered</span></div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono-data text-mono-data text-[11px]">
+          99.4% on-time
+        </span>
+<span class="font-body-sm text-body-sm text-outline truncate">Automated releases</span>
+</div>
+</div>
+</div>
+<!-- Section 3: Analytics & Vault Health (2/3 + 1/3) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Area Chart (2/3) -->
+<div class="lg:col-span-2 p-6 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm space-y-6 flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-serif">
+            Campaign Performance &amp; Content Delivery Velocity
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Verified audience impressions vs. milestone cryptographic payouts
+          </p>
+</div>
+<div class="flex items-center p-1 rounded-lg bg-surface-container-low border border-outline-variant/60 self-start">
+<button class="px-3 py-1 rounded font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" type="button">30D</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest shadow-sm font-label-sm text-label-sm font-semibold text-on-surface border border-outline-variant/40 transition-colors" type="button">90D</button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" type="button">YTD</button>
+<button class="px-3 py-1 rounded font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" type="button">All Time</button>
+</div>
+</div>
+<!-- Quick aggregates bar -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/60">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase text-[10px]">Cumulative Paid</span>
+<p class="font-mono-data text-body-md font-bold text-on-surface">$84,200 USDC</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase text-[10px]">Verified Reach</span>
+<p class="font-mono-data text-body-md font-bold text-on-surface">2,410,000</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase text-[10px]">Avg. Delivery SLA</span>
+<p class="font-mono-data text-body-md font-bold text-on-surface">4.2 Days</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase text-[10px]">Contract Gas Avg</span>
+<p class="font-mono-data text-body-md font-bold text-on-surface">0.0031 MATIC</p>
+</div>
+</div>
+<!-- Modern SVG Trend Chart -->
+<div class="relative w-full h-56 flex flex-col justify-end pt-4">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 700 180">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#715a3f" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#715a3f" stop-opacity="0.01"></stop>
+</lineargradient>
+</defs>
+<!-- Subtle Horizontal Grid Lines -->
+<line stroke="#e8e4da" stroke-width="1" x1="0" x2="700" y1="30" y2="30"></line>
+<line stroke="#e8e4da" stroke-width="1" x1="0" x2="700" y1="80" y2="80"></line>
+<line stroke="#e8e4da" stroke-width="1" x1="0" x2="700" y1="130" y2="130"></line>
+<!-- Filled Area -->
+<path d="M 0 160 Q 70 140 140 120 T 280 85 T 420 95 T 560 45 T 700 30 L 700 180 L 0 180 Z" fill="url(#chartGradient)"></path>
+<!-- Primary Curve -->
+<path d="M 0 160 Q 70 140 140 120 T 280 85 T 420 95 T 560 45 T 700 30" fill="none" stroke="#211e1c" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Secondary Deliverables Dotted Curve -->
+<path d="M 0 170 Q 70 155 140 140 T 280 115 T 420 125 T 560 85 T 700 65" fill="none" opacity="0.75" stroke="#715a3f" stroke-dasharray="4 4" stroke-linecap="round" stroke-width="2"></path>
+<!-- Interactive Node Dot -->
+<circle cx="560" cy="45" fill="#211e1c" r="5" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<!-- X-Axis Labels -->
+<div class="flex justify-between items-center text-outline font-mono-data text-mono-data pt-2 text-[11px]">
+<span>JAN</span>
+<span>FEB</span>
+<span>MAR</span>
+<span>APR</span>
+<span>MAY</span>
+<span>JUN (CURRENT)</span>
+</div>
+</div>
+</div>
+<!-- Vault Status & Health (1/3) -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm space-y-6 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-serif">Vault Security</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Polygon Amoy Multi-Sig Node</p>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container border border-outline-variant/60 text-on-surface font-mono-data text-mono-data text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-ping"></span> 80002
+        </span>
+</div>
+<!-- Circular Progress & Settlement Indicator -->
+<div class="flex flex-col items-center justify-center py-2 space-y-3">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 100 100">
+<!-- Background circle -->
+<circle cx="50" cy="50" fill="transparent" r="42" stroke="#ebe8e2" stroke-width="8"></circle>
+<!-- Active stroke: 84% of 263.89 circum = 221.6 -->
+<circle cx="50" cy="50" fill="transparent" r="42" stroke="#211e1c" stroke-dasharray="263.89" stroke-dashoffset="42.2" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute flex flex-col items-center text-center">
+<span class="font-headline-md text-headline-md font-serif text-on-surface font-medium">84%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">Disbursed</span>
+</div>
+</div>
+<span class="font-mono-data text-body-sm font-medium text-on-surface">119,994 / 142,850 USDC Released</span>
+</div>
+<!-- Key Health Metrics -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/50">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Vault Contract</span>
+<span class="font-mono-data text-mono-data text-on-surface font-medium flex items-center gap-1">
+            0x84f...c192
+            <span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-on-surface-variant text-[10px]">2 of 3</span>
+</span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/50">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Relayer Gas Reserve</span>
+<span class="font-mono-data text-mono-data text-secondary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span> 14.80 MATIC
+          </span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/50">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dispute Ratio</span>
+<span class="font-mono-data text-mono-data text-on-surface font-medium">0.2% (1 settled)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Pending Creator Applications (Quick Review Panel) -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-serif">
+            Pending Creator Applications
+          </h2>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/60 border border-secondary/20 text-on-secondary-container font-mono-data text-mono-data text-[11px]">
+            3 Ready for Decision
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Creators awaiting escrow contract instantiation and budget assignment
+        </p>
+</div>
+<a class="font-label-md text-label-md text-secondary hover:text-on-surface hover:underline flex items-center gap-1 transition-colors" href="#">
+        View all 34 applications <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Applicants Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+<!-- Applicant 1 -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/70 flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm border border-outline-variant" data-alt="Portrait photo of a young tech-focused male content creator wearing stylish glasses, natural soft studio rim lighting, clean minimal background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAz5PmzZs0cmtfvU5rfTp7TeNyfBHTW4lCroppwseINbhiwQsKefoV8b2BztItBb8zCHiciI16BS00iqyIkie1d-WSXuJMdLZ2blxmxdlUqla70hppLtZs2WO1_Mr0kpvt7CB9jgF5DMwMS0M9l3kH5qCjIdJnb0PiPBPpLEQhOSh_7wqcw9pobuS9_JG0mN5X24aE-RvnyUpeWE-8zRSn1WXCq9DZGT3w2sMfscN5"/>
+<div class="min-w-0">
+<h3 class="font-label-md text-label-md font-bold text-on-surface truncate">Jordan Lee</h3>
+<p class="font-mono-data text-mono-data text-on-surface-variant truncate text-[11px]">@jordancreates • YouTube/TikTok</p>
+<div class="flex items-center gap-1.5 pt-0.5">
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-surface-container-highest border border-outline-variant/60 font-mono-data text-label-sm text-on-surface text-[10px]">420K Subs</span>
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-secondary-fixed/50 border border-outline-variant/60 font-mono-data text-label-sm text-secondary text-[10px]">9.2% Eng</span>
+</div>
+</div>
+</div>
+<div class="space-y-1.5 pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider text-[10px]">Campaign Target</span>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Aura Smart Ring Launch</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1 Dedicated Long-form Video + 2 YouTube Shorts</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-outline-variant/60 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Proposed Budget:</span>
+<span class="font-mono-data text-body-md font-bold text-on-surface">4,500 USDC</span>
+</div>
+</div>
+<div class="space-y-2 pt-2">
+<button class="w-full py-2.5 px-3 rounded-lg bg-primary-container text-surface-bright font-label-md text-label-md font-semibold hover:bg-primary transition-colors flex items-center justify-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+            Approve &amp; Fund Escrow
+          </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors text-center" type="button">
+              Media Kit
+            </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-error font-label-md text-label-md hover:bg-error-container/40 transition-colors text-center" type="button">
+              Decline
+            </button>
+</div>
+</div>
+</div>
+<!-- Applicant 2 -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/70 flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm border border-outline-variant" data-alt="Warm aesthetic editorial portrait of a female lifestyle creator with a bright relaxed smile, soft golden-hour window lighting, neutral toned background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY3lq4bd5qHr2SC452zwJ6aFchwXAoAMnFg3PaL8iOgXiXhtELutfjHRqqANnUOUEtJ5qepaoZowscwoa8pxkFvXVTssBXNQaM3lKlyT9IqzeyfyASwMr2FUCR4JIl5XhdPG_5vMq4x-x6PZK20QCSRfKoxV_kwhoKtYlT-67q4lihqSjzcN8iYuWIC-KgpXytHwiti6ZPbLiXwB5F-hB0AGfMGXGsr0XmuQPVD0SV"/>
+<div class="min-w-0">
+<h3 class="font-label-md text-label-md font-bold text-on-surface truncate">Maya Chen</h3>
+<p class="font-mono-data text-mono-data text-on-surface-variant truncate text-[11px]">@mayalifestyle • IG &amp; Pinterest</p>
+<div class="flex items-center gap-1.5 pt-0.5">
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-surface-container-highest border border-outline-variant/60 font-mono-data text-label-sm text-on-surface text-[10px]">185K Followers</span>
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-secondary-fixed/50 border border-outline-variant/60 font-mono-data text-label-sm text-secondary text-[10px]">7.4% Eng</span>
+</div>
+</div>
+</div>
+<div class="space-y-1.5 pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider text-[10px]">Campaign Target</span>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Spring Wellness Glow</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">3 Instagram Reels + 1 Curated Story Highlight</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-outline-variant/60 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Proposed Budget:</span>
+<span class="font-mono-data text-body-md font-bold text-on-surface">2,800 USDC</span>
+</div>
+</div>
+<div class="space-y-2 pt-2">
+<button class="w-full py-2.5 px-3 rounded-lg bg-primary-container text-surface-bright font-label-md text-label-md font-semibold hover:bg-primary transition-colors flex items-center justify-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+            Approve &amp; Fund Escrow
+          </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors text-center" type="button">
+              Media Kit
+            </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-error font-label-md text-label-md hover:bg-error-container/40 transition-colors text-center" type="button">
+              Decline
+            </button>
+</div>
+</div>
+</div>
+<!-- Applicant 3 -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/70 flex flex-col justify-between space-y-4 hover:shadow-md transition-shadow">
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-xl object-cover shadow-sm border border-outline-variant" data-alt="Confident headshot of an athletic software developer in modern athletic apparel, sharp clean lighting, minimalist tech workstation blurred behind." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjUKXgjT-Fu8TjtspOfugx1iAxAK71ka-cu2ETNTeEd1NqR7u-6e91ErtYQ51CTQY41SfBUmcrh425C_FtxZSBz5dZEMKlBdhtUCklNCYf5g9wG6vtiBl0cPQsAfljiBWVq9Ibq2mh9Yt7SLWJKSAmDhXhjpjF9zkADBndBpXecDImw9hmJ74nidqxsUyqiVjpVoURbO8MHxcsznxcr16k3BNivZYpfVdZyPLbxm2"/>
+<div class="min-w-0">
+<h3 class="font-label-md text-label-md font-bold text-on-surface truncate">David Kim</h3>
+<p class="font-mono-data text-mono-data text-on-surface-variant truncate text-[11px]">@codeandfitness • X &amp; YouTube</p>
+<div class="flex items-center gap-1.5 pt-0.5">
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-surface-container-highest border border-outline-variant/60 font-mono-data text-label-sm text-on-surface text-[10px]">95K Tech Audience</span>
+<span class="inline-flex items-center px-1.5 py-0.2 rounded bg-secondary-fixed/50 border border-outline-variant/60 font-mono-data text-label-sm text-secondary text-[10px]">11.8% Eng</span>
+</div>
+</div>
+</div>
+<div class="space-y-1.5 pt-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider text-[10px]">Campaign Target</span>
+<p class="font-body-md text-body-md font-semibold text-on-surface">Aura Ring Dev SDK</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deep-dive Technical X Thread + Video Code Walkthrough</p>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-outline-variant/60 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Proposed Budget:</span>
+<span class="font-mono-data text-body-md font-bold text-on-surface">1,800 USDC</span>
+</div>
+</div>
+<div class="space-y-2 pt-2">
+<button class="w-full py-2.5 px-3 rounded-lg bg-primary-container text-surface-bright font-label-md text-label-md font-semibold hover:bg-primary transition-colors flex items-center justify-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+            Approve &amp; Fund Escrow
+          </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors text-center" type="button">
+              Media Kit
+            </button>
+<button class="py-2 px-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-error font-label-md text-label-md hover:bg-error-container/40 transition-colors text-center" type="button">
+              Decline
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Active Milestones & Proof-to-Pay Tracker -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-serif">
+          Active Milestones &amp; Proof-to-Pay Tracker
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Cryptographically linked deliverable verification ready for multi-sig settlement
+        </p>
+</div>
+<span class="font-mono-data text-mono-data text-outline self-start sm:self-auto text-[11px]">
+        Chain Link Oracle Verification: Enabled
+      </span>
+</div>
+<!-- Live Deliverables Queue -->
+<div class="space-y-4">
+<!-- Item 1: Uploaded 2h ago -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/70 space-y-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">Aura Smart Ring: Tech Unboxing Reel</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container/70 border border-outline-variant/60 text-on-secondary-container font-mono-data text-mono-data text-[11px]">
+                Deliverables Uploaded (2h ago)
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
+<span>Creator: <strong class="text-on-surface">@techwithalex</strong></span>
+<span>•</span>
+<span class="font-mono-data text-secondary font-medium">Vault Lock: 3,200 USDC</span>
+</p>
+</div>
+<!-- Action CTA Group -->
+<div class="flex items-center gap-3">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+              Request Minor Revision
+            </button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-surface-bright font-label-md text-label-md font-semibold hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+              Review &amp; Release 3,200 USDC
+            </button>
+</div>
+</div>
+<!-- Smart Contract Step Progression -->
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-outline-variant/60 space-y-3">
+<div class="grid grid-cols-4 gap-2 text-center">
+<div class="flex flex-col items-center">
+<div class="w-7 h-7 rounded-full bg-emerald-600 text-surface-bright flex items-center justify-center font-bold text-[13px]">✓</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold pt-1">Escrow Funded</span>
+<span class="font-mono-data text-mono-data text-outline text-[11px]">0x49c...91</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-7 h-7 rounded-full bg-emerald-600 text-surface-bright flex items-center justify-center font-bold text-[13px]">✓</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold pt-1">Content Uploaded</span>
+<span class="font-mono-data text-mono-data text-outline text-[11px]">SHA256 Validated</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-7 h-7 rounded-full bg-primary-container text-surface-bright flex items-center justify-center font-mono-data text-[12px] animate-pulse">3</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold pt-1">Brand Inspection</span>
+<span class="font-mono-data text-mono-data text-secondary text-[11px]">Pending Approval</span>
+</div>
+<div class="flex flex-col items-center opacity-40">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-mono-data text-[12px]">4</div>
+<span class="font-label-sm text-label-sm text-on-surface pt-1">Vault Disbursed</span>
+<span class="font-mono-data text-mono-data text-outline text-[11px]">Polygon Auto-Tx</span>
+</div>
+</div>
+<!-- Proof Metadata Line -->
+<div class="pt-2 flex flex-wrap items-center justify-between text-body-sm bg-surface-container-low border border-outline-variant/50 p-2.5 rounded-lg">
+<span class="font-mono-data text-mono-data text-on-surface-variant flex items-center gap-1.5 text-[12px]">
+<span class="material-symbols-outlined text-[16px] text-secondary">link</span>
+              instagram.com/reel/C8k9x2m48pL
+            </span>
+<span class="font-mono-data text-mono-data text-outline truncate max-w-xs text-[11px]">
+              IPFS Hash: ipfs://bafybeic...7q4x
+            </span>
+</div>
+</div>
+</div>
+<!-- Item 2: In Progress -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-outline-variant/70 space-y-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-body-lg font-bold text-on-surface">Hydration Bottle Summer Blast</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container border border-outline-variant/60 text-on-surface font-mono-data text-mono-data text-[11px]">
+                Production in Progress
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-2">
+<span>Creator: <strong class="text-on-surface">@sarahfit</strong></span>
+<span>•</span>
+<span class="font-mono-data text-secondary font-medium">Milestone 1/2 cleared (1,500 USDC paid)</span>
+</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-mono-data text-mono-data text-outline text-[11px]">Milestone 2 due in 3 days</span>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" type="button">
+              Message Creator
+            </button>
+</div>
+</div>
+<!-- Mini Progress representation -->
+<div class="space-y-1.5">
+<div class="flex justify-between font-mono-data text-mono-data text-on-surface-variant text-[11px]">
+<span>Milestone 2: 60-second TikTok Story Review</span>
+<span>1,500 USDC remaining locked</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-1/2 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 6: Recent On-Chain Escrow Transactions Ledger -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm space-y-6">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-serif">
+          Recent On-Chain Escrow Ledger
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Immutable event log on Polygon Amoy Testnet (Chain ID 80002)
+        </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-600 animate-pulse"></span>
+<span class="font-mono-data text-mono-data text-on-surface font-medium text-[12px]">Block Height #6,419,082</span>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider text-[11px] border-b border-outline-variant/60">
+<th class="py-3 px-4 rounded-l-lg">Date / Timestamp</th>
+<th class="py-3 px-4">Event Type</th>
+<th class="py-3 px-4">Creator / Recipient</th>
+<th class="py-3 px-4">Amount</th>
+<th class="py-3 px-4">Contract State</th>
+<th class="py-3 px-4 rounded-r-lg text-right">Amoy Tx Hash</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-outline-variant/40">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-mono-data text-mono-data text-outline text-[12px]">
+              Jun 24, 2024 • 14:32 UTC
+            </td>
+<td class="py-3.5 px-4 font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-700">lock_open</span>
+              Escrow Release
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-[10px]">T</div>
+<span class="font-medium">@techwithalex</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data font-bold text-on-surface">
+              3,200 USDC
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-mono-data text-mono-data text-[11px]">
+                Settled (M1)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<span class="font-mono-data text-mono-data text-secondary hover:text-on-surface hover:underline cursor-pointer inline-flex items-center gap-1 text-[12px]">
+                0x71e...88a4
+                <span class="material-symbols-outlined text-[14px] text-outline">open_in_new</span>
+</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-mono-data text-mono-data text-outline text-[12px]">
+              Jun 23, 2024 • 19:10 UTC
+            </td>
+<td class="py-3.5 px-4 font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+              Deposit &amp; Lock
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-secondary flex items-center justify-center font-bold text-[10px]">S</div>
+<span class="font-medium">@sarahfit</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data font-bold text-on-surface">
+              3,000 USDC
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-mono-data text-mono-data text-[11px]">
+                Vault In-Lock
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<span class="font-mono-data text-mono-data text-secondary hover:text-on-surface hover:underline cursor-pointer inline-flex items-center gap-1 text-[12px]">
+                0x92a...c01f
+                <span class="material-symbols-outlined text-[14px] text-outline">open_in_new</span>
+</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-mono-data text-mono-data text-outline text-[12px]">
+              Jun 22, 2024 • 08:45 UTC
+            </td>
+<td class="py-3.5 px-4 font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-emerald-700">lock_open</span>
+              Escrow Release
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[10px]">C</div>
+<span class="font-medium">@cryptobuzz</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data font-bold text-on-surface">
+              5,500 USDC
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-mono-data text-mono-data text-[11px]">
+                Settled (Full)
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<span class="font-mono-data text-mono-data text-secondary hover:text-on-surface hover:underline cursor-pointer inline-flex items-center gap-1 text-[12px]">
+                0x3fb...591d
+                <span class="material-symbols-outlined text-[14px] text-outline">open_in_new</span>
+</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4 font-mono-data text-mono-data text-outline text-[12px]">
+              Jun 20, 2024 • 21:04 UTC
+            </td>
+<td class="py-3.5 px-4 font-medium text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">gavel</span>
+              Arbitration Cleared
+            </td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-[10px]">M</div>
+<span class="font-medium">@metaverse_dan</span>
+</div>
+</td>
+<td class="py-3.5 px-4 font-mono-data font-bold text-on-surface">
+              1,200 USDC
+            </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-mono-data text-mono-data text-[11px]">
+                Resolved by DAO
+              </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<span class="font-mono-data text-mono-data text-secondary hover:text-on-surface hover:underline cursor-pointer inline-flex items-center gap-1 text-[12px]">
+                0x11c...74e0
+                <span class="material-symbols-outlined text-[14px] text-outline">open_in_new</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Link -->
+<div class="flex items-center justify-between pt-2">
+<span class="font-mono-data text-mono-data text-outline text-[11px]">Showing 4 of 148 historical contract transactions</span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface hover:underline flex items-center gap-1 font-semibold transition-colors" type="button">
+        View Entire Polygonscan Ledger <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic micro-interactions
+  document.addEventListener('DOMContentLoaded', () => {
+    // Quick copy notification feedback
+    const txCopyElements = document.querySelectorAll('.font-mono-data');
+    txCopyElements.forEach(el => {
+      el.addEventListener('click', (e) => {
+        if(e.target.innerText.includes('0x')) {
+          const original = e.target.innerText;
+          // non-blocking feedback
+          e.target.style.opacity = '0.5';
+          setTimeout(() => {
+            e.target.style.opacity = '1';
+          }, 300);
+        }
+      });
+    });
+  });
+</script></main></div></body></html>

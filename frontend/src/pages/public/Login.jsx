@@ -1,0 +1,22 @@
+import { Link } from "react-router-dom";
+
+export default function Login() {
+  return (
+    <div style={{minHeight:"100vh",display:"grid",placeItems:"center",background:"#f8f7fc",fontFamily:"Arial,sans-serif"}}>
+      <div style={{background:"white",padding:"40px",borderRadius:"16px",width:"min(380px,85%)",boxShadow:"0 8px 30px #0000000d"}}>
+        <h1 style={{color:"#8174E8"}}>Sponsify</h1>
+        <h2>Welcome back</h2>
+        <p>Sign in to continue to your account.</p>
+        <form onSubmit={(e)=>{e.preventDefault();alert("Login will be connected to the backend soon.");}}>
+          <label>Email</label>
+          <input type="email" required placeholder="Enter your email" style={{display:"block",width:"100%",padding:"12px",margin:"8px 0 18px",boxSizing:"border-box"}} />
+          <label>Password</label>
+          <input type="password" required placeholder="Enter your password" style={{display:"block",width:"100%",padding:"12px",margin:"8px 0 20px",boxSizing:"border-box"}} />
+          <button type="submit" style={{width:"100%",padding:"13px",background:"#8174E8",color:"white",border:0,borderRadius:"8px",cursor:"pointer"}}>Sign In</button>
+        </form>
+        <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
+        <Link to="/">Back to home</Link>
+      </div>
+    </div>
+  );
+}

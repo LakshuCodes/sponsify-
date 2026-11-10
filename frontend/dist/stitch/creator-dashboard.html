@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary": "#070504",
+          "on-secondary-fixed": "#281804",
+          "primary-fixed": "#e8e1dd",
+          "on-surface-variant": "#4d4540",
+          "tertiary-fixed": "#efe0ce",
+          "primary-fixed-dim": "#ccc5c2",
+          "on-primary": "#ffffff",
+          "on-background": "#1c1c18",
+          "tertiary-fixed-dim": "#d2c4b3",
+          "outline-variant": "#cfc4be",
+          "inverse-surface": "#31312d",
+          "on-primary-fixed-variant": "#4a4643",
+          "surface-variant": "#e5e2dc",
+          "error": "#ba1a1a",
+          "on-secondary-fixed-variant": "#58432a",
+          "outline": "#7e7570",
+          "on-error": "#ffffff",
+          "secondary-container": "#fadab8",
+          "secondary-fixed-dim": "#e0c1a1",
+          "tertiary-container": "#251e12",
+          "on-tertiary": "#ffffff",
+          "surface-dim": "#dcdad4",
+          "background": "#fcf9f3",
+          "inverse-on-surface": "#f3f0ea",
+          "inverse-primary": "#ccc5c2",
+          "on-tertiary-fixed": "#221a0f",
+          "on-secondary-container": "#765e43",
+          "surface-container-lowest": "#ffffff",
+          "surface-tint": "#625d5b",
+          "on-primary-fixed": "#1e1b19",
+          "on-secondary": "#ffffff",
+          "on-tertiary-fixed-variant": "#4f4538",
+          "surface-bright": "#fcf9f3",
+          "error-container": "#ffdad6",
+          "on-primary-container": "#8b8582",
+          "on-tertiary-container": "#918575",
+          "surface-container-highest": "#e5e2dc",
+          "surface-container-high": "#ebe8e2",
+          "surface": "#fcf9f3",
+          "on-error-container": "#93000a",
+          "surface-container-low": "#f6f3ed",
+          "secondary": "#715a3f",
+          "surface-container": "#f0eee8",
+          "on-surface": "#1c1c18",
+          "secondary-fixed": "#fdddbb",
+          "tertiary": "#0a0601",
+          "primary-container": "#211e1c"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "margin": "1.25rem",
+          "margin-tablet": "2.5rem",
+          "space-xl": "3rem",
+          "gutter": "1.5rem",
+          "gutter-desktop": "2.5rem",
+          "margin-desktop": "4rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.75rem"
+        },
+        "fontFamily": {
+          "headline-sm": ["EB Garamond"],
+          "display-mobile": ["EB Garamond"],
+          "body-md": ["Manrope"],
+          "display": ["EB Garamond"],
+          "headline-lg": ["EB Garamond"],
+          "headline-md": ["EB Garamond"],
+          "title-lg": ["Manrope"],
+          "body-lg": ["Manrope"],
+          "label-md": ["Manrope"],
+          "label-sm": ["Manrope"],
+          "body-sm": ["Manrope"],
+          "headline-lg-mobile": ["EB Garamond"],
+          "title-md": ["Manrope"]
+        },
+        "fontSize": {
+          "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "500"}],
+          "display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+          "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+          "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400"}],
+          "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+          "title-lg": ["18px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "body-lg": ["17px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600"}],
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "500"}],
+          "body-sm": ["13px", {"lineHeight": "20px", "letterSpacing": "0.015em", "fontWeight": "400"}],
+          "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600"}]
+        }
+      }
+    }
+  }</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center justify-between bg-surface-container"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-semibold">S</div><div><div class="flex items-center gap-space-xs"><span class="font-title-md text-title-md text-on-surface">Marcus Vance</span><span class="material-symbols-outlined text-[16px] text-secondary">verified</span></div><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Studio • Verified</span></div></div><button class="text-on-surface-variant hover:text-on-surface p-space-xs rounded-lg hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">unfold_more</span></button></div><div class="px-space-md pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Console Navigation</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary-container text-on-primary rounded-lg font-medium"><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-colors bg-primary-container text-on-primary rounded-lg font-medium" data-path="overview" href="#"><span class="font-body-sm text-body-sm">Overview</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="discover-campaigns" href="#"><span class="font-body-sm text-body-sm">Discover Campaigns</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">Open</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="my-applications" href="#"><span class="font-body-sm text-body-sm">My Applications</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">3</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="active-collaborations" href="#"><span class="font-body-sm text-body-sm">Active Collaborations &amp; Vaults</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">4</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="deliverables-proof-submission" href="#"><span class="font-body-sm text-body-sm">Deliverables &amp; Proof</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant">2 Pending</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="earnings-payouts" href="#"><span class="font-body-sm text-body-sm">Earnings &amp; Payouts</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="wallet-tax" href="#"><span class="font-body-sm text-body-sm">Wallet &amp; Tax (1099)</span><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant">On-Chain</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="font-body-sm text-body-sm">Settings</span></a></nav></div><div class="p-space-md"><div class="bg-surface-container p-space-md rounded-xl space-y-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Escrow Secured</span><span class="flex h-2 w-2 rounded-full bg-secondary"></span></div><div><div class="font-headline-sm text-headline-sm text-on-surface font-semibold">$18,400 USDC</div><div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">2 Deliverables Due this Week</div></div><div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">bolt</span> Gasless Relayer</span><span class="text-secondary font-medium">Active</span></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-baseline gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-primary font-normal">Sponsify</span><span class="font-label-sm text-label-sm tracking-widest uppercase text-secondary font-semibold">Creator Console</span></div><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-secondary-fixed-dim"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Polygon Amoy Testnet</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer"><span class="font-label-md text-label-md text-on-surface font-mono">0x9a4F...7e21</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">content_copy</span><span class="w-1.5 h-1.5 rounded-full bg-secondary ml-1"></span></div><button class="relative p-space-xs rounded-lg hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-4 h-4 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">2</span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="text-right hidden sm:block"><div class="font-title-md text-title-md leading-tight text-on-surface font-medium">Marcus Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant">@marcusvibes • High-Fidelity Audio</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<div class="max-w-[1360px] mx-auto w-full px-margin-tablet lg:px-margin-desktop py-space-lg space-y-space-xl">
+<!-- Top Welcome & Breadcrumb Header -->
+<header class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md border-b border-surface-variant pb-space-lg">
+<div class="space-y-space-xs max-w-3xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Creator Workspace</span>
+<span class="text-[12px] opacity-40">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Marcus Vance</span>
+<span class="text-[12px] opacity-40">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Overview &amp; Earnings</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Creator Command Center &amp; Earnings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Welcome back, Marcus. You have <span class="font-semibold text-primary">$18,400.00 USDC</span> cryptographically secured across <span class="font-semibold text-primary">4 active campaign vaults</span>. 2 milestone proofs are under autonomous brand review.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-end shrink-0">
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-body-sm font-medium transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_balance_wallet</span>
+<span>Withdraw Settled Funds</span>
+</button>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary text-body-sm font-medium transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Submit Deliverable Proof</span>
+</button>
+</div>
+</header>
+<!-- Top Financial & Performance Metric Cards (4 Cards) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Lifetime Earnings</span>
+<span class="p-1 rounded-md bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[16px]">monetization_on</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-md text-headline-md font-normal text-on-surface tracking-tight">$64,850.00 <span class="text-title-md text-on-surface-variant font-body-md">USDC</span></div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +12.4%
+            </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">vs last quarter</span>
+</div>
+</div>
+<div class="pt-space-xs border-t border-surface-variant/60 flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">100% On-Time Payout Rate</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Funds Locked in Escrow</span>
+<span class="p-1 rounded-md bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-md text-headline-md font-normal text-on-surface tracking-tight">$18,400.00 <span class="text-title-md text-on-surface-variant font-body-md">USDC</span></div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">4 On-chain vaults active</span>
+</div>
+</div>
+<div class="pt-space-xs border-t border-surface-variant/60 flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-secondary font-medium">0 Counterparty Risk</span>
+<span class="font-mono font-label-sm text-label-sm">Amoy Safe</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Pending Brand Review</span>
+<span class="p-1 rounded-md bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-md text-headline-md font-normal text-on-surface tracking-tight">$5,900.00 <span class="text-title-md text-on-surface-variant font-body-md">USDC</span></div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 Submissions in Safe Harbor</span>
+</div>
+</div>
+<div class="pt-space-xs border-t border-surface-variant/60 flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">48h Autonomous Expiry</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">timer</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between relative overflow-hidden group hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Proof-to-Pay Score</span>
+<span class="p-1 rounded-md bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+</span>
+</div>
+<div class="my-space-md">
+<div class="font-headline-md text-headline-md font-normal text-on-surface tracking-tight">99.8%</div>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">26 of 26 milestones verified</span>
+</div>
+</div>
+<div class="pt-space-xs border-t border-surface-variant/60 flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm text-secondary font-medium">0 Disputes filed</span>
+<span class="font-label-sm text-label-sm">Tier-1 Creator</span>
+</div>
+</div>
+</section>
+<!-- Two-Column Mid Section: Velocity Chart & Connected Vault -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<!-- Left Column (approx 62% width - 7 col in 12 or 8 col) -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Treasury Trajectory</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Earnings Velocity &amp; Settlement Flow</h2>
+</div>
+<div class="inline-flex rounded-lg bg-surface-container p-0.5 self-start">
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md text-on-surface-variant hover:text-on-surface">30D</button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md bg-primary-container text-on-primary font-semibold">90D</button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md text-on-surface-variant hover:text-on-surface">YTD</button>
+<button class="px-2.5 py-1 text-label-sm font-label-sm rounded-md text-on-surface-variant hover:text-on-surface">All</button>
+</div>
+</div>
+<!-- Clean Inline SVG Earnings Trajectory Chart -->
+<div class="relative w-full h-56 pt-2">
+<svg class="w-full h-full overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 600 180">
+<defs>
+<lineargradient id="earningsGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#715a3f" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#715a3f" stop-opacity="0.00"></stop>
+</lineargradient>
+</defs>
+<!-- Grid lines -->
+<line opacity="0.4" stroke="#cfc4be" stroke-dasharray="3 3" x1="0" x2="600" y1="30" y2="30"></line>
+<line opacity="0.4" stroke="#cfc4be" stroke-dasharray="3 3" x1="0" x2="600" y1="80" y2="80"></line>
+<line opacity="0.4" stroke="#cfc4be" stroke-dasharray="3 3" x1="0" x2="600" y1="130" y2="130"></line>
+<!-- Gradient fill under trajectory -->
+<path d="M 20 150 C 90 142, 140 120, 200 115 C 280 108, 320 85, 400 70 C 470 55, 520 28, 580 20 L 580 170 L 20 170 Z" fill="url(#earningsGrad)"></path>
+<!-- Smooth trajectory stroke -->
+<path d="M 20 150 C 90 142, 140 120, 200 115 C 280 108, 320 85, 400 70 C 470 55, 520 28, 580 20" stroke="#715a3f" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Milestone Nodes -->
+<circle cx="20" cy="150" fill="#fcf9f3" r="4" stroke="#715a3f" stroke-width="2"></circle>
+<circle cx="200" cy="115" fill="#fcf9f3" r="4" stroke="#715a3f" stroke-width="2"></circle>
+<circle cx="400" cy="70" fill="#fcf9f3" r="4" stroke="#715a3f" stroke-width="2"></circle>
+<circle cx="580" cy="20" fill="#211e1c" r="5" stroke="#fcf9f3" stroke-width="2"></circle>
+</svg>
+<!-- Month Labels -->
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm pt-2">
+<span>Jan ($4.2k)</span>
+<span>Feb ($6.8k)</span>
+<span>Mar ($9.5k)</span>
+<span>Apr ($11.2k)</span>
+<span>May ($14.6k)</span>
+<span class="text-primary font-semibold">Jun ($18.4k)</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Metadata Footer -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-md border-t border-surface-variant/60 mt-space-md">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Avg. Settlement</div>
+<div class="font-title-md text-title-md text-on-surface font-medium mt-0.5">1.8 hrs <span class="font-body-sm text-body-sm text-on-surface-variant">post-review</span></div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Polygon Gas Saved</div>
+<div class="font-title-md text-title-md text-secondary font-medium mt-0.5">$142.50 <span class="font-label-sm text-label-sm text-on-surface-variant">(100% Subsidized)</span></div>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Next Auto-Release</div>
+<div class="font-title-md text-title-md text-on-surface font-medium mt-0.5">Tomorrow, 14:00 UTC</div>
+</div>
+</div>
+</div>
+<!-- Right Column (Vault Status & Instant Payout) -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl shadow-sm flex flex-col justify-between space-y-space-md">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Smart Escrow Vault</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-mono font-label-sm text-label-sm">EIP-4337 Sponsored</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">Settlement Account</h2>
+<!-- Connected Wallet snippet -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div>
+<div class="font-mono font-label-md text-label-md text-on-surface">0x9a4F...7e21</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Polygon Amoy • Account Abstraction</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant cursor-pointer hover:text-on-surface">open_in_new</span>
+</div>
+<!-- Target Progress Ring/Metric -->
+<div class="mt-space-md space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface font-medium">Q2 Target: $43,000 USDC</span>
+<span class="text-secondary font-semibold">74% Achieved</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 74%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>$32,000.00 Accumulated</span>
+<span>$11,000.00 Remaining</span>
+</div>
+</div>
+</div>
+<!-- Available Payout Action Box -->
+<div class="p-space-md rounded-xl bg-surface-container border border-surface-variant/40 space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Instant Claim Available</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">0.00 MATIC Fee</span>
+</div>
+<div class="font-headline-md text-headline-md text-primary font-normal tracking-tight">
+            $3,200.00 <span class="font-body-md text-body-md text-on-surface-variant">USDC</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Funds from verified milestone #1 of Nordic Audio Labs campaign. Immediate on-chain distribution ready.
+          </p>
+<button class="w-full py-2.5 px-space-md rounded-lg bg-primary text-on-primary hover:bg-primary-container text-body-sm font-medium transition-all shadow-sm flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+<span>Claim $3,200.00 USDC to Connected Wallet</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary Focus Section: Milestone Proof Submissions & Live Vaults -->
+<section class="space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-xs border-b border-surface-variant">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Proof-of-Execution Pipeline</span>
+<h2 class="font-headline-md text-headline-md text-primary">Active Deliverables &amp; Proof Submissions</h2>
+</div>
+<!-- Filter tabs -->
+<div class="flex items-center gap-1 overflow-x-auto pb-1">
+<button class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">All Active (4)</button>
+<button class="px-3 py-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-colors flex items-center gap-1.5">
+<span>Action Required</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+<button class="px-3 py-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-colors">In Brand Review (2)</button>
+<button class="px-3 py-1.5 rounded-lg hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider transition-colors">Scheduled (1)</button>
+</div>
+</div>
+<div class="space-y-space-md">
+<!-- ITEM 1: ACTION REQUIRED - Dedicated Submission Box -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm border-l-4 border-secondary space-y-space-md">
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold tracking-wider uppercase">Action Required</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Milestone 02 of 03</span>
+<span class="text-on-surface-variant opacity-40">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Due in 2 days (Oct 18)
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Dedicated 4K Video Publication &amp; Tagged Reels</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Brand: <strong class="text-on-surface font-semibold">Aura Health Inc.</strong> • Campaign: <em>Aura Gen-3 Titanium Ring Showcase</em>
+</p>
+</div>
+<div class="text-left lg:text-right shrink-0 bg-surface-container p-space-sm rounded-lg lg:bg-transparent lg:p-0">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Escrow Locked</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">$2,700.00 USDC</div>
+<div class="font-label-sm text-label-sm text-secondary font-mono">Vault #AUR-9812</div>
+</div>
+</div>
+<!-- Interactive Proof Submission Workspace -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Oracle Attestation Data Payload</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span> Chainlink Verifiable
+              </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Live Deliverable URL (YouTube / Reels)</label>
+<div class="relative">
+<input class="w-full h-11 px-3 bg-surface-container-lowest rounded-md text-body-sm text-on-surface border border-outline-variant/50 focus:outline-none focus:border-secondary font-mono" type="text" value="https://youtube.com/watch?v=aura_titanium_audio"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-secondary">check_circle</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">IPFS Raw Asset Proof &amp; Telemetry CID</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-3 bg-surface-container-lowest rounded-md text-body-sm text-on-surface-variant border border-outline-variant/50 font-mono truncate" readonly="" type="text" value="ipfs://bafybeic73kx9j47z2q8x01a94p8m21l8v2"/>
+<button class="absolute right-2 px-2 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container-highest transition-colors" type="button">Copy CID</button>
+</div>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Creator Verification Notes &amp; Analytics Snapshot</label>
+<textarea class="w-full p-3 bg-surface-container-lowest rounded-md text-body-sm text-on-surface border border-outline-variant/50 focus:outline-none focus:border-secondary resize-none font-body-sm" rows="2">Published Oct 16 at 09:00 EST. Reached 28k impressions in initial 4h with primary affiliate link pinned. Full 4K uncompressed master backed up to Arweave per SLA agreement.</textarea>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Submitting creates an on-chain event triggering Aura Health's 48h review window.</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-space-md py-2 text-body-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" type="button">Save Draft</button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container text-body-sm font-medium transition-colors shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Submit Proof to Oracle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ITEM 2: IN BRAND REVIEW (48h Safe Harbor) -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm space-y-space-md hover:bg-surface-container/60 transition-colors">
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-semibold tracking-wider uppercase">In Brand Review</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Milestone 01 of 02</span>
+<span class="text-on-surface-variant opacity-40">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Safe Harbor Window Active</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">High-Fidelity Sound Demo + Audio Stem Archive</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Brand: <strong class="text-on-surface font-semibold">Nordic Audio Labs</strong> • Campaign: <em>Nordic ANC Earbuds Launch</em>
+</p>
+</div>
+<div class="text-left lg:text-right shrink-0">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Escrow Locked</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">$3,200.00 USDC</div>
+<div class="font-label-sm text-label-sm text-secondary font-mono">Vault #NOR-4109</div>
+</div>
+</div>
+<!-- Safe Harbor Telemetry Bar -->
+<div class="p-space-md rounded-lg bg-surface-container space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">history_toggle_off</span>
+                Submitted 18 hours ago • Brand Review: 30 hours remaining
+              </span>
+<span class="font-label-sm text-label-sm font-mono text-secondary font-semibold">62.5% of window elapsed</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 37.5%"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Proof Hash: <code class="font-mono text-on-surface">0x71fc...89a2</code> (Verified IPFS attachment)</span>
+<span class="italic">Autonomous release triggers if brand takes no dispute action by Oct 18, 16:30 UTC</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm">
+<button class="text-body-sm font-medium text-secondary hover:text-primary transition-colors flex items-center gap-1 underline underline-offset-4" type="button">
+<span>View Submission Details</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">chat_bubble_outline</span>
+<span>Message Brand Liaison</span>
+</button>
+</div>
+</div>
+<!-- ITEM 3: IN BRAND REVIEW (Expiring shortly) -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm space-y-space-md hover:bg-surface-container/60 transition-colors">
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold tracking-wider uppercase">Auto-Release Imminent</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Milestone 02 of 02</span>
+<span class="text-on-surface-variant opacity-40">•</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Safe Harbor 42h / 48h</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">In-Depth X/Twitter Analysis Thread + Github Repo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Brand: <strong class="text-on-surface font-semibold">FinFlow Protocol</strong> • Campaign: <em>DeFi Budgeting App Deep Dive</em>
+</p>
+</div>
+<div class="text-left lg:text-right shrink-0">
+<div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Escrow Locked</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">$1,800.00 USDC</div>
+<div class="font-label-sm text-label-sm text-secondary font-mono">Vault #FIN-0238</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm p-space-sm rounded-lg bg-surface-container">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">alarm_on</span>
+<span class="font-body-sm text-body-sm">Submitted 42 hours ago • <strong class="font-semibold text-primary">Autonomous Release in 6 hours</strong></span>
+</div>
+<div class="flex items-center gap-space-sm self-end sm:self-auto">
+<button class="px-3 py-1 rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-mono flex items-center gap-1 transition-colors" type="button">
+<span>Track Polygon Relayer</span>
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lower Section: Recent Verified Milestone Payouts & Inscriptions -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-space-xs pb-space-xs border-b border-surface-variant">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Immutable Ledger</span>
+<h2 class="font-headline-md text-headline-md text-primary">Recent Verified Milestone Payouts</h2>
+</div>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span>View All 26 Receipts</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<div class="overflow-x-auto rounded-xl bg-surface-container-low shadow-sm">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-surface-variant bg-surface-container">
+<th class="py-3 px-space-md font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Timestamp</th>
+<th class="py-3 px-space-md font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Brand &amp; Campaign</th>
+<th class="py-3 px-space-md font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Milestone Scope</th>
+<th class="py-3 px-space-md font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Amount</th>
+<th class="py-3 px-space-md font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Release Mechanism</th>
+<th class="py-3 px-space-md font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant text-right">Contract Proof</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-variant/40 font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-on-surface-variant text-[13px]">Oct 14, 2024</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Sol Health Biohacking</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">30-Day Recovery Feature</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface">30-Day Recovery YouTube Mid-roll</td>
+<td class="py-3.5 px-space-md font-headline-sm text-[17px] text-primary font-medium">$4,000.00 USDC</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Autonomous Oracle
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<a class="font-mono text-secondary hover:text-primary font-label-sm text-label-sm inline-flex items-center gap-0.5" href="#">
+                  0x84f4...c192
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-on-surface-variant text-[13px]">Oct 08, 2024</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Aura Health Inc.</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Aura Gen-3 Launch</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface">Script Treatment &amp; Visual Outline</td>
+<td class="py-3.5 px-space-md font-headline-sm text-[17px] text-primary font-medium">$900.00 USDC</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Multi-sig Instant
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<a class="font-mono text-secondary hover:text-primary font-label-sm text-label-sm inline-flex items-center gap-0.5" href="#">
+                  0x9e12...b48a
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-on-surface-variant text-[13px]">Sep 29, 2024</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">Keychron Minimalist</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Custom Series Showcase</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface">Mechanical Keyboard Ergonomics Review</td>
+<td class="py-3.5 px-space-md font-headline-sm text-[17px] text-primary font-medium">$2,200.00 USDC</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Brand Approval
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<a class="font-mono text-secondary hover:text-primary font-label-sm text-label-sm inline-flex items-center gap-0.5" href="#">
+                  0x321a...88cc
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-space-md font-mono text-on-surface-variant text-[13px]">Sep 15, 2024</td>
+<td class="py-3.5 px-space-md">
+<div class="font-medium text-on-surface">SponsorFlow DAO</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Ecosystem Grants V1</div>
+</td>
+<td class="py-3.5 px-space-md text-on-surface">Platform Alpha Testing &amp; Bug Bounty</td>
+<td class="py-3.5 px-space-md font-headline-sm text-[17px] text-primary font-medium">$1,500.00 USDC</td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Settled via Escrow
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<a class="font-mono text-secondary hover:text-primary font-label-sm text-label-sm inline-flex items-center gap-0.5" href="#">
+                  0x110e...88ab
+                  <span class="material-symbols-outlined text-[13px]">open_in_new</span>
+</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</div></main></div></body></html>
